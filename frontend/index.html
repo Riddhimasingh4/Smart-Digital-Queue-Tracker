@@ -1,29 +1,79 @@
+```html
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Smart Digital Queue Tracker</title>
+
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<div class="container">
-    <h1>⏳ Smart Queue Tracker</h1>
+    <div class="container">
 
-    <input id="name" placeholder="Your Name">
-    <select id="priority">
-        <option>Normal</option>
-        <option>Senior</option>
-        <option>Emergency</option>
-    </select>
+        <h1>⏳ Smart Queue Tracker</h1>
 
-    <button onclick="join()">Book Slot</button>
+        <p class="subtitle">
+            Book your slot and manage your waiting time smartly.
+        </p>
 
-    <h3>Live Queue</h3>
-    <ul id="list"></ul>
+        <div class="booking-section">
 
-    <button class="serve" onclick="serve()">Serve Next</button>
-</div>
+            <h2>Book Your Slot</h2>
 
-<script src="script.js"></script>
+            <input
+                type="text"
+                id="name"
+                placeholder="Enter your full name"
+                autocomplete="name"
+            >
+
+            <select id="priority">
+                <option value="Normal">Normal Priority</option>
+                <option value="Senior">Senior Citizen</option>
+                <option value="Emergency">Emergency</option>
+            </select>
+
+            <button onclick="join()" id="joinBtn">
+                Book My Slot
+            </button>
+
+        </div>
+
+        <div class="queue-section">
+
+            <h2>📋 Live Queue</h2>
+
+            <p class="queue-description">
+                Track customers currently waiting for service.
+            </p>
+
+            <ul id="list">
+                <li>Loading queue...</li>
+            </ul>
+
+        </div>
+
+        <div class="service-section">
+
+            <button class="serve-btn" onclick="serve()">
+                Serve Next Customer →
+            </button>
+
+        </div>
+
+        <footer>
+            <p>Smart Digital Queue Management System</p>
+            <small>Efficient • Organized • Smart</small>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
 </body>
 </html>
+```
