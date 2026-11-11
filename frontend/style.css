@@ -1,45 +1,71 @@
+```css
+/* ===== GLOBAL STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: linear-gradient(to right, #6a11cb, #2575fc);
-    font-family: Arial;
+    background: linear-gradient(135deg, #141e30, #243b55);
+    font-family: 'Segoe UI', Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
-    color: white;
+    min-height: 100vh;
+    padding: 20px;
+    color: #ffffff;
 }
 
+/* ===== MAIN CONTAINER ===== */
 .container {
-    background: #1f1f2e;
-    padding: 25px;
-    width: 360px;
-    border-radius: 12px;
-    text-align: center;
-}
-
-input {
-    padding: 8px;
-    width: 70%;
-    border-radius: 5px;
-    border: none;
-}
-
-button {
-    padding: 8px 12px;
-    margin-top: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.serve-btn {
-    background: #ff4d4d;
-    color: white;
+    background: #1e293b;
+    padding: 35px;
     width: 100%;
+    max-width: 420px;
+    border-radius: 18px;
+    text-align: center;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-li {
-    background: #2e2e4e;
-    margin: 5px;
-    padding: 8px;
-    border-radius: 5px;
+.container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 45px rgba(0, 0, 0, 0.5);
 }
+
+/* ===== HEADINGS ===== */
+h1 {
+    font-size: 27px;
+    margin-bottom: 12px;
+    color: #ffffff;
+    letter-spacing: 0.5px;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 20px 0 12px;
+    color: #38bdf8;
+}
+
+/* ===== INPUT FIELDS ===== */
+input {
+    padding: 12px;
+    width: 70%;
+    border-radius: 8px;
+    border: 1px solid #475569;
+    outline: none;
+    background: #334155;
+    color: white;
+    font-size: 14px;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+input::placeholder {
+    color: #cbd5e1;
+}
+
+input:focus {
+    border-color: #38bdf8;
+    box-shadow: 0 0 8px
